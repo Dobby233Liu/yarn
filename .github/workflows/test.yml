@@ -18,9 +18,11 @@ jobs:
         distribution: 'adopt'
     - name: Test
       run: |
-        ./gradlew downloadMcJars mergeJars mapNamedJar decompileCFR
+        ./gradlew downloadMcJars mapNamedJar decompileCFR
     - name: Classlist
       run: ls -R namedSrc > class-list.txt
     - uses: actions/upload-artifact@v2
       with:
-        path: class-list.txt
+        path: |
+          class-list.txt
+          namedSrc/net/minecraft/entity/ItemEntity.java
