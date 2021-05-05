@@ -18,7 +18,7 @@ jobs:
         distribution: 'adopt'
     - name: Test
       run: |
-        ./gradlew download
+        ./gradlew downloadMcJars
         ./gradlew mergeJars
         ./gradlew mapNamedJar
         ./gradlew decompileCFR
