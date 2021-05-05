@@ -18,7 +18,9 @@ jobs:
         distribution: 'adopt'
     - name: Test
       run: |
-        ./gradlew downloadMcJars
-        ./gradlew mergeJars
-        ./gradlew mapNamedJar
-        ./gradlew decompileCFR
+        ./gradlew downloadMcJars mergeJars mapNamedJar decompileCFR
+    - name: Classlist
+      run: ls -R namedSrc > class-list.txt
+    - uses: actions/upload-artifact@v2
+      with:
+        path: class-list.txt
