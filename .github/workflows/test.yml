@@ -16,7 +16,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-      - name: Test
+    - name: Test
       run: |
         ./gradlew download
         ./gradlew mergeJars
