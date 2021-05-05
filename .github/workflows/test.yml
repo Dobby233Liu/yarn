@@ -25,4 +25,3 @@ jobs:
       with:
         path: |
           class-list.txt
-          namedSrc/net/minecraft/entity/ItemEntity.java
